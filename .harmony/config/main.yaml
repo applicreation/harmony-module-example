@@ -1,0 +1,6 @@
+---
+
+name: Example module
+modules:
+  - name: Example
+    url: /example
