@@ -1,15 +1,10 @@
 ---
 
-# @todo needs replacing with release
-#release:
-#  types:
-#    - published
-
 name: Release
 on:
-  push:
-    branches:
-      - main
+  release:
+    types:
+      - published
 jobs:
   docker:
     name: Build and push
@@ -26,12 +21,13 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Get versions
+        id: versions
         uses: applicreation/versions-action@main
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}:v0.0.0
-            ghcr.io/${{ github.repository }}:v0.0
-            ghcr.io/${{ github.repository }}:v0
+            ghcr.io/${{ github.repository }}:${{ steps.versions.output.patch }}
+            ghcr.io/${{ github.repository }}:${{ steps.versions.output.minor }}
+            ghcr.io/${{ github.repository }}:${{ steps.versions.output.major }}
