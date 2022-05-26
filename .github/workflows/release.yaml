@@ -30,6 +30,6 @@ jobs:
         with:
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/harmony-module-example:v0.0.0
-            ghcr.io/${{ github.repository_owner }}/harmony-module-example:v0.0
-            ghcr.io/${{ github.repository_owner }}/harmony-module-example:v0
+            ghcr.io/${{ github.repository_name }}:v0.0.0
+            ghcr.io/${{ github.repository_name }}:v0.0
+            ghcr.io/${{ github.repository_name }}:v0
