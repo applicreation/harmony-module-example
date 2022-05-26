@@ -28,6 +28,6 @@ jobs:
         with:
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}:${{ steps.versions.output.patch }}
-            ghcr.io/${{ github.repository }}:${{ steps.versions.output.minor }}
-            ghcr.io/${{ github.repository }}:${{ steps.versions.output.major }}
+            ghcr.io/${{ github.repository }}:${{ steps.versions.outputs.patch }}
+            ghcr.io/${{ github.repository }}:${{ steps.versions.outputs.minor }}
+            ghcr.io/${{ github.repository }}:${{ steps.versions.outputs.major }}
