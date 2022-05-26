@@ -25,6 +25,8 @@ jobs:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Get versions
+        uses: applicreation/versions-action@main
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
