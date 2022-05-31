@@ -1,10 +1,10 @@
 ---
 
 repository:
-  name: harmony-module-example
-  description: Harmony example module
-  homepage: https://github.com/lickdltd/harmony-module-example
-  topics: harmony, module, example
+  name: harmony-module-example-html
+  description: Harmony example HTML module
+  homepage: https://github.com/lickdltd/harmony-module-example-html
+  topics: harmony, module, example, html
   private: false
   has_issues: true
   has_projects: false

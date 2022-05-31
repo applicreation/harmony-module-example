@@ -16,25 +16,23 @@ The only tool required is [Docker Desktop](https://www.docker.com/products/docke
 
 services:
   proxy:
-    image: ghcr.io/applicreation/harmony-proxy:latest
+    image: ghcr.io/applicreation/harmony-proxy:v0
     ports:
       - 80:80
   core:
-    image: ghcr.io/applicreation/harmony-core:latest
+    image: ghcr.io/applicreation/harmony-core:v0
     volumes:
       - ./.harmony/core:/root/.harmony:ro
-  example:
-    image: ghcr.io/applicreation/harmony-module-example:latest
+  example-html:
+    image: ghcr.io/applicreation/harmony-module-example-html:v0
 ```
 
 ```yaml
 # ./.harmony/core/config.yaml
 ---
 
-name: Example
 modules:
-  - name: Example
-    url: /example
+  - id: example-html
 ```
 
 ## Development

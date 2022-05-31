@@ -2,14 +2,14 @@
 
 services:
   proxy:
-    image: ghcr.io/applicreation/harmony-proxy:latest
+    image: ghcr.io/applicreation/harmony-proxy:v0
     ports:
       - 80:80
   core:
-    image: ghcr.io/applicreation/harmony-core:latest
+    image: ghcr.io/applicreation/harmony-core:v0
     volumes:
       - ./.harmony:/root/.harmony:ro
-  example:
+  example-html:
     image: nginx:1-alpine
     volumes:
       - ./app:/usr/share/nginx/html:ro

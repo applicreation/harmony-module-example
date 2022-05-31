@@ -1,6 +1,4 @@
 ---
 
-name: Example module
 modules:
-  - name: Example
-    url: /example
+  - id: example-html
