@@ -3,7 +3,7 @@
 repository:
   name: harmony-module-example-html
   description: Harmony example HTML module
-  homepage: https://github.com/lickdltd/harmony-module-example-html
+  homepage: https://github.com/applicreation/harmony-module-example-html
   topics: harmony, module, example, html
   private: false
   has_issues: true
